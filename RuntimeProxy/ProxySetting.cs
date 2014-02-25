@@ -13,6 +13,9 @@ namespace RuntimeProxy
     public static class ProxySetting
     {
         private static NetworkCredential Credential;
+
+        public static bool IsCredential = false;
+
         /// <summary>
         /// プロキシ接続を構成します
         /// </summary>
@@ -48,6 +51,8 @@ namespace RuntimeProxy
                 handler.Proxy = WebRequest.DefaultWebProxy;
                 handler.Proxy.Credentials = tempCredential;
                 handler.UseProxy=true;
+
+                IsCredential = true;
             }
             
         }

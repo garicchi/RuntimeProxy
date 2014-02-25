@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RuntimeProxy;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -48,7 +49,7 @@ namespace TestApp
                 this.DebugSettings.EnableFrameRateCounter = true;
             }
 #endif
-
+            
             Frame rootFrame = Window.Current.Content as Frame;
 
             // ウィンドウに既にコンテンツが表示されている場合は、アプリケーションの初期化を繰り返さずに、

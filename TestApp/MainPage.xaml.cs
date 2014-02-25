@@ -38,13 +38,18 @@ namespace TestApp
             await ProxySetting.SetProxyAsync(new Uri("http://google.com"));
 
 
+            
+            
+                
+        }
+
+        private async void Button_Click(object sender, RoutedEventArgs e)
+        {
             HttpClient client = new HttpClient();
 
             var s = await client.GetStringAsync("http://google.com");
             MessageDialog dialog = new MessageDialog(s);
             await dialog.ShowAsync();
-            
-                
         }
     }
 }
